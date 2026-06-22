@@ -25,18 +25,6 @@ src/
 
 ---
 
-src/
-
-├── harness.ts # Core LLM harness (retry, circuit breaker, logging, timeout)
-└── agents/
-├── orchestrator.ts # Intake orchestrator — coordinates all sub-agents
-├── medicalAgent.ts # Parses and summarizes clinical notes
-├── complianceAgent.ts # Validates care plans against state regulations
-├── familyAgent.ts # Drafts plain-language family welcome summaries
-└── incidentWorkflow.ts # Incident classification, routing, validation loop
-
----
-
 ## Key Design Decisions
 
 ### LLM Harness (`harness.ts`)
