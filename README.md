@@ -12,6 +12,19 @@ This project implements the AI layer of a CRM and operating system for residenti
 
 ## Architecture
 
+```
+src/
+├── harness.ts                  # Core LLM harness (retry, circuit breaker, logging, timeout)
+└── agents/
+    ├── orchestrator.ts         # Intake orchestrator — coordinates all sub-agents
+    ├── medicalAgent.ts         # Parses and summarizes clinical notes
+    ├── complianceAgent.ts      # Validates care plans against state regulations
+    ├── familyAgent.ts          # Drafts plain-language family welcome summaries
+    └── incidentWorkflow.ts     # Incident classification, routing, validation loop
+```
+
+---
+
 src/
 
 ├── harness.ts # Core LLM harness (retry, circuit breaker, logging, timeout)
